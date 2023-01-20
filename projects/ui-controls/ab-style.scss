@@ -1,0 +1,14 @@
+$white: #ffffff;
+$purple: #be52f2;
+$secondary: #6979f8;
+
+$green: #00c48c;
+$orange: #ffa26b;
+$cyan: #0084f4;
+$yellow: #ffcf5c;
+$red: #ff647c;
+
+$primary: $purple;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./node_modules/bootstrap/scss/variables";

@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Button</h1>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12 ms-sm-auto col-lg-12 px-md-4 my-4">
+        <table class="table table-borderless align-middle text-center">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Primary</th>
+                    <th scope="col">Secondary</th>
+                    <th scope="col">Links</th>
+                    <th scope="col">Icon Buttons</th>
+                    <th scope="col">Icon Only Buttons</th>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"><code>.btn-primary</code></th>
+                    <th scope="col"><code>.btn-secondary</code></th>
+                    <th scope="col"><code>.btn-link</code></th>
+                    <th scope="col"><code>.btn-icon</code></th>
+                    <th scope="col"><code>.btn-icon-only</code></th>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <hr />
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Plan Buttons</th>
+                    <td>
+                        <ab-button label="Primary" class="btn-primary" icon="ri-home-line" [iconOnly]="false"
+                            [disabled]="false" (abClick)="testData($event)"></ab-button>
+                    </td>
+                    <td>
+                        <ab-button label="Primary" class="btn-secondary" icon="ri-home-line" [iconOnly]="false"
+                            [disabled]="false" (abClick)="testData($event)"></ab-button>
+                    </td>
+                    <td>
+                        <ab-button label="Primary" icon="ri-home-line" [iconOnly]="false" [disabled]="false"
+                            (abClick)="testData($event)"></ab-button>
+                    <td>
+                        <ab-button label="Primary" icon="ri-home-line" [iconOnly]="false" [disabled]="false"
+                            (abClick)="testData($event)"></ab-button>
+                    </td>
+                    <td>
+                        <ab-button label="Primary" icon="ri-home-line" [iconOnly]="false" [disabled]="false"
+                            (abClick)="testData($event)"></ab-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

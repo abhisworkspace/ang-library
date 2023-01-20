@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "allowedNonPeerDependencies": ["bootstrap"],
+  "dest": "../../dist/ui-controls",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": ["ab-style.scss"]
+}

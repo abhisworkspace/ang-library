@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../src/assets/fonts/SFProText-Regular.eot");
+  src: url("../src/assets/fonts/SFProText-Regular.woff2") format("woff2"),
+    url("../src/assets/fonts/SFProText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../src/assets/fonts/SFProText-Medium.eot");
+  src: url("../src/assets/fonts/SFProText-Medium.eot")
+      format("embedded-opentype"),
+    url("../src/assets/fonts/SFProText-Medium.woff2") format("woff2"),
+    url("../src/assets/fonts/SFProText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../src/assets/fonts/SFProText-Semibold.eot");
+  src: url("../src/assets/fonts/SFProText-Semibold.eot")
+      format("embedded-opentype"),
+    url("../src/assets/fonts/SFProText-Semibold.woff2") format("woff2"),
+    url("../src/assets/fonts/SFProText-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../src/assets/fonts/SFProText-Bold.eot");
+  src: url("../src/assets/fonts/SFProText-Bold.eot") format("embedded-opentype"),
+    url("../src/assets/fonts/SFProText-Bold.woff2") format("woff2"),
+    url("../src/assets/fonts/SFProText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "SF Pro Text";
+  font-weight: normal;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

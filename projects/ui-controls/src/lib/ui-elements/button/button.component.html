@@ -1,6 +1,6 @@
-<button type="button" class="btn d-flex align-items-center {{ dynamicClass }}" [ngClass]="{'disabled':disabled}"
+<button type="button" class="btn {{ dynamicClass }} d-flex align-items-center " [ngClass]="{'disabled':disabled}"
     (click)="buttonClick($event)" (mouseover)="buttonMouseOver($event)" (mousedown)="buttonMouseDown($event)">
     <i class="{{ icon }}" *ngIf="btnIconLeft && icon" [ngClass]="iconOnly ? 'me-0': 'me-2'"></i>
     <span *ngIf="!iconOnly">{{label}}</span>
-    <i class="ms-2{{ icon }}" *ngIf="btnIconRight && icon"></i>
+    <i class="ms-2 {{ icon }}" *ngIf="btnIconRight && icon"></i>
 </button>

@@ -1,14 +1,9 @@
-$white: #ffffff;
-$purple: #be52f2;
-$secondary: #6979f8;
+@import "../../src/_variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap";
 
-$green: #00c48c;
-$orange: #ffa26b;
-$cyan: #0084f4;
-$yellow: #ffcf5c;
-$red: #ff647c;
-
-$primary: $purple;
-
-@import "./node_modules/bootstrap/scss/bootstrap.scss";
-@import "./node_modules/bootstrap/scss/variables";
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: normal;
+  height: 100vh;
+}

@@ -48,6 +48,85 @@
 body {
   font-family: "SF Pro Text";
   font-weight: normal;
+  height: 100vh;
 }
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+$white: #ffffff;
+$primary: #5249eb;
+$secondary: #606190;
+$success: #36cb79;
+$info: #d6d6f2;
+$warning: #ffbf43;
+$danger: #ea5455;
+$dark: #000000;
+
+$red: #f9f9ff;
+$green: #1b1d24;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+[data-bs-theme="light"] {
+  /*
+    * LIGHT THEME
+    */
+  //Border Colors
+  $border-color-100: #ececff;
+  $border-color-200: #e2e2fb;
+  $border-color-300: #bbbcf6;
+  $border-color-400: #a9acd6;
+  --border-color-500: #b2b7fb;
+
+  //DARK THEME BACKGROUND COLOR
+  $bg-color-1: #ffffff;
+  $bg-color-2: #f9f9ff;
+  $bg-color-3: #ececff;
+  $bg-color-4: #f0f2f8;
+
+  //LIGHT THEME FONT COLORS
+  $font-color-1: #434469;
+  $font-color-2: #606190;
+  $font-color-3: #5b5d98;
+  $font-color-4: #a5a7c7;
+  $font-color-link: #5249eb;
+
+  --bs-body-bg: #f0f2f8;
+  --white: #ffffff;
+
+  --primary: #5249eb;
+}
+
+[data-bs-theme="dark"] {
+  /*
+* DARK THEME
+*/
+
+  //Border Colors
+  $border-color-100: #25283f;
+  $border-color-200: #2c303f;
+  $border-color-300: #40496e;
+  $border-color-400: #606190;
+  --border-color-500: #313495;
+  $border-color-600: #5249eb;
+
+  //DARK THEME BACKGROUND COLOR
+  $bg-color-1: #16171c;
+  $bg-color-2: #1b1d24;
+  $bg-color-3: #1f222b;
+  $bg-color-4: #1f222b;
+  $bg-color-5: #282a3c;
+
+  //DARK THEME FONT COLORS
+  $font-color-1: #7c7dac;
+  $font-color-2: #a8a8d0;
+  $font-color-3: #ececff;
+  $font-color-4: $white;
+  $font-color-link: #7e77f0;
+
+  --bs-body-bg: #16171c;
+  --white: #ffffff;
+  --primary: #36cb79;
+}
+
+#sidebarMenu {
+  background-color: var(--primary);
+}

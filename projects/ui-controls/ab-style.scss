@@ -1,9 +1,53 @@
-@import "../../src/_variables";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../ui-controls/variables";
+
+@import "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css";
+@import "../../projects/ui-controls/node_modules/bootstrap/scss/bootstrap.scss";
 @import "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap";
 
 body {
   font-family: "Noto Sans", sans-serif;
   font-weight: normal;
   height: 100vh;
+}
+.page-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #43436c;
+  line-height: 32px;
+}
+
+/*
+* Common Form Label
+*/
+.form-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #606190;
+  line-height: 20px;
+  margin-bottom: 4px;
+  .required {
+    color: #ea5455;
+    font-weight: 500;
+  }
+}
+
+/**
+* * Common Form Label
+*/
+
+html[data-bs-theme="light"] {
+  body {
+    background-color: #f0f2f9;
+  }
+  .page-title {
+    color: #43436c;
+  }
+}
+html[data-bs-theme="dark"] {
+  body {
+    background-color: #1b1d24;
+  }
+  .page-title {
+    color: #ececff;
+  }
 }

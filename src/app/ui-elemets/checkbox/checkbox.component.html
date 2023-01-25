@@ -1,0 +1,53 @@
+<!-- <ab-dropdown></ab-dropdown> -->
+
+<ab-page-grid>
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-title">Checkbox</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Checkbox</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-xl-3">
+              <ab-checkbox
+                label="Unselected"
+                inputId="unselected"
+                name="unselect"
+                value="data"
+                [isReadOnly]="true"
+              ></ab-checkbox>
+            </div>
+            <div class="col-xl-3">
+              <ab-checkbox
+                label="Selected"
+                inputId="selected"
+                [isChecked]="true"
+              ></ab-checkbox>
+            </div>
+            <div class="col-xl-3">
+              <ab-checkbox
+                label="Disabled"
+                inputId="disabled"
+                [isDisabled]="true"
+              ></ab-checkbox>
+            </div>
+            <div class="col-xl-3">
+              <ab-checkbox
+                label="Dis. Selected"
+                inputId="dis_Selected"
+                [isChecked]="true"
+                [isDisabled]="true"
+              ></ab-checkbox>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ab-page-grid>

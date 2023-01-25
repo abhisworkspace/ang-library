@@ -1,0 +1,16 @@
+<div class="form-check checkbox" [ngClass]="{ disabled: isDisabled }">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    [attr.name]="name"
+    [attr.id]="inputId"
+    [value]="value"
+    [readOnly]="isReadOnly"
+    [checked]="isChecked"
+    [disabled]="isDisabled"
+    [attr.required]="isRequired"
+  />
+  <label class="form-check-label" for="{{ inputId }}">
+    {{ label }}
+  </label>
+</div>

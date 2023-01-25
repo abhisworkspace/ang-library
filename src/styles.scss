@@ -1,132 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
 
-@font-face {
-  font-family: "SF Pro Text";
-  src: url("../src/assets/fonts/SFProText-Regular.eot");
-  src: url("../src/assets/fonts/SFProText-Regular.woff2") format("woff2"),
-    url("../src/assets/fonts/SFProText-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Text";
-  src: url("../src/assets/fonts/SFProText-Medium.eot");
-  src: url("../src/assets/fonts/SFProText-Medium.eot")
-      format("embedded-opentype"),
-    url("../src/assets/fonts/SFProText-Medium.woff2") format("woff2"),
-    url("../src/assets/fonts/SFProText-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Text";
-  src: url("../src/assets/fonts/SFProText-Semibold.eot");
-  src: url("../src/assets/fonts/SFProText-Semibold.eot")
-      format("embedded-opentype"),
-    url("../src/assets/fonts/SFProText-Semibold.woff2") format("woff2"),
-    url("../src/assets/fonts/SFProText-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Text";
-  src: url("../src/assets/fonts/SFProText-Bold.eot");
-  src: url("../src/assets/fonts/SFProText-Bold.eot") format("embedded-opentype"),
-    url("../src/assets/fonts/SFProText-Bold.woff2") format("woff2"),
-    url("../src/assets/fonts/SFProText-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap";
 
 body {
-  font-family: "SF Pro Text";
+  font-family: "Noto Sans", sans-serif;
   font-weight: normal;
   height: 100vh;
 }
 
-$white: #ffffff;
-$primary: #5249eb;
-$secondary: #606190;
-$success: #36cb79;
-$info: #d6d6f2;
-$warning: #ffbf43;
-$danger: #ea5455;
-$dark: #000000;
-
-$red: #f9f9ff;
-$green: #1b1d24;
-
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
-
-[data-bs-theme="light"] {
-  /*
-    * LIGHT THEME
-    */
-  //Border Colors
-  $border-color-100: #ececff;
-  $border-color-200: #e2e2fb;
-  $border-color-300: #bbbcf6;
-  $border-color-400: #a9acd6;
-  --border-color-500: #b2b7fb;
-
-  //DARK THEME BACKGROUND COLOR
-  $bg-color-1: #ffffff;
-  $bg-color-2: #f9f9ff;
-  $bg-color-3: #ececff;
-  $bg-color-4: #f0f2f8;
-
-  //LIGHT THEME FONT COLORS
-  $font-color-1: #434469;
-  $font-color-2: #606190;
-  $font-color-3: #5b5d98;
-  $font-color-4: #a5a7c7;
-  $font-color-link: #5249eb;
-
-  --bs-body-bg: #f0f2f8;
-  --white: #ffffff;
-
-  --primary: #5249eb;
-}
-
-[data-bs-theme="dark"] {
-  /*
-* DARK THEME
-*/
-
-  //Border Colors
-  $border-color-100: #25283f;
-  $border-color-200: #2c303f;
-  $border-color-300: #40496e;
-  $border-color-400: #606190;
-  --border-color-500: #313495;
-  $border-color-600: #5249eb;
-
-  //DARK THEME BACKGROUND COLOR
-  $bg-color-1: #16171c;
-  $bg-color-2: #1b1d24;
-  $bg-color-3: #1f222b;
-  $bg-color-4: #1f222b;
-  $bg-color-5: #282a3c;
-
-  //DARK THEME FONT COLORS
-  $font-color-1: #7c7dac;
-  $font-color-2: #a8a8d0;
-  $font-color-3: #ececff;
-  $font-color-4: $white;
-  $font-color-link: #7e77f0;
-
-  --bs-body-bg: #16171c;
-  --white: #ffffff;
-  --primary: #36cb79;
-}
 
 #sidebarMenu {
   background-color: var(--primary);
+}
+
+main {
+  height: 100%;
+}
+
+.main-content {
+  padding-top: 50px;
+  background-color: #f0f2f8;
+  height: 100%;
+  overflow-y: scroll;
+  .form-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    width: calc(100% - 50px);
+    padding: 10px 15px;
+    z-index: 10;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  &.main-content-minimize {
+    padding-left: 50px;
+    .form-footer {
+      width: calc(100% - 50px);
+    }
+  }
+  &.main-content-expand {
+    padding-left: 230px;
+    .form-footer {
+      width: calc(100% - 230px);
+      left: 230px;
+    }
+  }
+}
+
+.inner-content {
+  padding: 24px 20px;
+  height: calc(100% - 50px);
+}
+
+.page-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #43436c;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ececff;
+  background-color: #fff;
+  box-shadow: 0 0 4px #e1e4f1a7;
+  border-radius: 4px;
+  .card-header {
+    padding: 11px 24px;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e2fb;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    h4 {
+      color: #43436c;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .card-body {
+    padding: 24px;
+    background-color: #fff;
+  }
+}
+
+html[data-bs-theme="light"] {
+  body {
+    background-color: #f0f2f9;
+  }
+  .page-title {
+    color: #43436c;
+  }
+  .card {
+    border: 1px solid #ececff;
+    background-color: #fff;
+    box-shadow: 0 0 4px #e1e4f1a7;
+    .card-header {
+      background-color: #fff;
+      border-bottom: 1px solid #e2e2fb;
+      h4 {
+        color: #43436c;
+      }
+    }
+    .card-body {
+      background-color: #fff;
+    }
+  }
+}
+
+html[data-bs-theme="dark"] {
+  body {
+    background-color: #101014;
+  }
+  .page-title {
+    color: #ececff;
+  }
+  .card {
+    background-color: #1b1d24;
+    border: 1px solid #bbbcf626;
+    box-shadow: 0 0 4px #16171c84;
+    .card-header {
+      background-color: #1b1d24 !important;
+      border-bottom: 1px solid #242632;
+      h4 {
+        color: #ecebfd;
+      }
+    }
+    .card-body {
+      background-color: #1a1d24;
+    }
+  }
 }

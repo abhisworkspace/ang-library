@@ -1,1 +1,27 @@
-<p>dropdown works!</p>
+<div class="custom-dropdown" [ngClass]="{'multiple':multipleSelect}">
+    <label class="form-label" *ngIf="isLabelVisible">{{label}} <span class="required">*</span></label>
+    <div class="custom-select">
+        <input type="text" class="form-control" [attr.placeholder]="placeholderLabel" readonly
+            (click)="showDropdown($event)">
+        <ul class="select-dropdown" *ngIf="isDropdownVisible">
+            <ng-container *ngIf="!multipleSelect">
+                <li (click)="selectedEvent($event, item[optionValue], item[optionLabel])" *ngFor="let item of options;">
+                    <label *ngIf="!multipleSelect">{{item.name}}</label>
+                </li>
+            </ng-container>
+            <ng-container *ngIf="multipleSelect">
+                <li *ngFor="let item of options;">
+                    <div class="form-check checkbox">
+                        <input class="form-check-input" type="checkbox" id="{{item.id}}"
+                            (click)="checkedEvent($event, item[optionValue], item[optionLabel])">
+                        <!-- (change)="checkedEvent($event, item[optionValue], item[optionLabel])" -->
+                        <label class="form-check-label" for="{{item.id}}">
+                            {{item.name}}
+                        </label>
+                    </div>
+                    <label *ngIf="!multipleSelect">{{item.name}}</label>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+</div>

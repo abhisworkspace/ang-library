@@ -1,0 +1,14 @@
+@media (min-width: 1440px) {
+  .fixed-container {
+    width: 1074px;
+    margin: 0 auto;
+    // padding: 0 43px;
+  }
+}
+
+.inner-content {
+  padding: 80px 20px 30px 20px;
+  height: calc(100% - 150px);
+  margin-bottom: 50px;
+  /* 100% - (Header height + Breadcrums + Footer button for Form)*/
+}

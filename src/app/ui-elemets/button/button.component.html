@@ -1,64 +1,198 @@
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Button</h1>
-</div>
-
-
-
-<div class="row">
-    <div class="col-md-12 ms-sm-auto col-lg-12 px-md-4 my-4">
-        <table class="table table-borderless align-middle text-center">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Primary</th>
-                    <th scope="col">Secondary</th>
-                    <th scope="col">Links</th>
-                    <th scope="col">Icon Buttons</th>
-                    <th scope="col">Icon Only Buttons</th>
-                </tr>
-                <tr>
-                    <td colspan="7">
-                        <hr />
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col"><code>.btn-primary</code></th>
-                    <th scope="col"><code>.btn-secondary</code></th>
-                    <th scope="col"><code>.btn-link</code></th>
-                    <th scope="col"><code>.btn-icon</code></th>
-                    <th scope="col"><code>.btn-icon-only</code></th>
-                </tr>
-                <tr>
-                    <td colspan="7">
-                        <hr />
-                    </td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Plan Buttons</th>
-                    <td>
-                        <ab-button label="Primary" class="btn-primary" icon="ri-home-line" [iconOnly]="false"
-                            [disabled]="false" (abClick)="testData($event)"></ab-button>
-                    </td>
-                    <td>
-                        <ab-button label="Primary" class="btn-secondary" icon="ri-home-line" [iconOnly]="false"
-                            [disabled]="false" (abClick)="testData($event)"></ab-button>
-                    </td>
-                    <td>
-                        <ab-button icon="ri-home-line" class="btn-primary" [iconOnly]="true"
-                            (abClick)="testData($event)"></ab-button>
-                    <td>
-                        <ab-button label="Primary" class="btn-primary" icon="ri-home-line" iconPosition="right"
-                            [iconOnly]="false" [disabled]="false" (abClick)="testData($event)"></ab-button>
-                    </td>
-                    <td>
-                        <ab-button label="Primary" class="btn-primary" icon="ri-home-line" [iconOnly]="false"
-                            [disabled]="false" (abClick)="testData($event)"></ab-button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<ab-page-grid>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-title">Buttons</h1>
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Buttons</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderless align-middle text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Primary</th>
+                                <th scope="col">Secondary</th>
+                                <th scope="col">Tertiary</th>
+                                <th scope="col">Links</th>
+                                <th scope="col">Icon Buttons</th>
+                                <th scope="col">Icon Only Buttons</th>
+                            </tr>
+                            <tr>
+                                <td colspan="7">
+                                    <hr />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col"><code>.btn-primary</code></th>
+                                <th scope="col"><code>.btn-secondary</code></th>
+                                <th scope="col"><code>.btn-tertiary</code></th>
+                                <th scope="col"><code>.btn-link</code></th>
+                                <th scope="col"><code>.btn-icon</code></th>
+                                <th scope="col"><code>.btn-icon</code></th>
+                            </tr>
+                            <tr>
+                                <td colspan="7">
+                                    <hr />
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Plan Buttons</th>
+                                <td>
+                                    <ab-button label="Primary" class="btn-primary mx-auto"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Secondary" class="btn-secondary mx-auto"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Tertiary" class="btn-tertiary mx-auto"></ab-button>
+                                <td>
+                                    <ab-button label="Link" class="btn-link mx-auto"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="icon" class="btn-primary mx-auto" icon="ri-home-line"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="" class="btn-icon mx-auto" [iconOnly]="true"
+                                        icon="ri-home-line"></ab-button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Icon With Text</th>
+                                <td>
+                                    <ab-button label="Primary" class="btn-primary mx-auto"
+                                        icon="ri-home-line"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Secondary" class="btn-secondary mx-auto" icon="ri-home-line"
+                                        iconPosition="right"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Tertiary" class="btn-tertiary mx-auto" icon="ri-home-line"
+                                        iconPosition="right"></ab-button>
+                                <td>
+                                    <ab-button label="Link" class="btn-link mx-auto" icon="ri-home-line"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="icon" class="btn-primary mx-auto" icon="ri-home-line"
+                                        iconPosition="right"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="" class="btn-icon mx-auto" [iconOnly]="true"
+                                        icon="ri-home-line"></ab-button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Icon With Text</th>
+                                <td>
+                                    <ab-button label="Primary" class="btn-primary mx-auto"
+                                        icon="ri-home-line"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Secondary" class="btn-secondary mx-auto" icon="ri-home-line"
+                                        iconPosition="right"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Tertiary" class="btn-tertiary mx-auto" icon="ri-home-line"
+                                        iconPosition="right"></ab-button>
+                                <td>
+                                    <ab-button label="Link" class="btn-link mx-auto" icon="ri-home-line"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="icon" class="btn-primary mx-auto" icon="ri-home-line"
+                                        iconPosition="right"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="" class="btn-icon mx-auto" [iconOnly]="true"
+                                        icon="ri-home-line"></ab-button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Only Icon button</th>
+                                <td>
+                                    <ab-button label="Primary" class="btn-primary mx-auto" icon="ri-home-line"
+                                        [iconOnly]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Secondary" class="btn-secondary mx-auto" icon="ri-home-line"
+                                        [iconOnly]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Tertiary" class="btn-tertiary mx-auto" icon="ri-home-line"
+                                        [iconOnly]="true"></ab-button>
+                                <td>
+                                    <ab-button label="Link" class="btn-link mx-auto" icon="ri-home-line"
+                                        [iconOnly]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="icon" class="btn-primary mx-auto" icon="ri-home-line"
+                                        [iconOnly]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="" class=" btn-icon  btn-primary mx-auto" [iconOnly]="true"
+                                        icon="ri-home-line"></ab-button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Button disabled</th>
+                                <td>
+                                    <ab-button label="Primary" class="btn-primary mx-auto"
+                                        [disabled]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Secondary" class="btn-secondary mx-auto"
+                                        [disabled]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="Tertiary" class="btn-tertiary mx-auto"
+                                        [disabled]="true"></ab-button>
+                                <td>
+                                    <ab-button label="Link" class="btn-link mx-auto" [disabled]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="icon" class="btn-primary mx-auto" icon="ri-home-line"
+                                        [disabled]="true"></ab-button>
+                                </td>
+                                <td>
+                                    <ab-button label="" class="btn-icon mx-auto" [iconOnly]="true" icon="ri-home-line"
+                                        [disabled]="true"></ab-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</ab-page-grid>

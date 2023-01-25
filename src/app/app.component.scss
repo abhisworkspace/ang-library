@@ -131,3 +131,36 @@
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
+
+#sidebar {
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  top: 50px;
+  padding-bottom: 50px;
+  height: calc(100% - 50px);
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 9px 3px #ececff;
+  overflow-y: auto;
+  transition: width 0.35s ease-in-out;
+  width: 230px;
+  ul {
+    list-style-type: none;
+    padding: 30px 0 0 0;
+    li {
+      padding: 0 10px;
+      a {
+        text-decoration: none;
+        display: block;
+        min-height: 48px;
+        color: #000;
+        font-size: 12px;
+        font-weight: normal;
+        font-family: "Noto Sans";
+        max-width: 230px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
